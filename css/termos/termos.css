@@ -21,6 +21,7 @@
 
 .termos h2{
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .termos h2:nth-child(n + 2){
