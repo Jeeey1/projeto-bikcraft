@@ -1,96 +1,73 @@
-.seguros-bg{
-  background-color: var(--cor-11);
+.seguros-bg {
+  background: var(--cor-11);
 }
 
-.seguros{
+.seguros {
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding-top: 60px;
-  padding-bottom: 60px;
   align-items: center;
 }
 
-.seguros h2{
-  grid-column: 1 / -1;
+#seguros .seguros {
+  padding-top: 0px;
 }
 
-.seguros-item{
-  display: grid;
-  grid-template-columns: 1fr auto;
+.seguros h2 {
+  grid-column: 1/-1;
+}
+
+.seguros-item {
   background-color: var(--cor-12);
   padding: 32px 32px 32px 60px;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
   border-radius: 4px;
 }
 
+.seguros-item h3 {
+  margin-bottom: 40px;
+}
 
-.seguros-item li{
+.seguros-item span {
+  grid-column: 2;
+  display: block;
+  text-align: right;
+}
+
+.seguros-item ul {
+  grid-column: 1/-1;
+  margin-bottom: 32px;
+}
+
+.seguros-item li {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.seguros-item li + li{
+.seguros-item li + li {
   margin-top: 20px;
 }
 
-.seguros-item li::before{
-  content: url(../../img/icones/lista.svg);
-  position: absolute;
-  left: -20px;
-}
-
-.seguros-item ul{
-  grid-column: 1 / -1;
-  margin-bottom: 32px;
-}
-
-.seguros-item a{
-  grid-column: 1 / -1;
-  place-self: start left;
-  
-}
-
-.seguros-item span{
-  justify-self: right;
-}
-
-.seguros-item h3{
-  margin-bottom: 40px;
-}
-
-
-.seguros-item span::after{
-  content: "mensal";
-  font: 400 0.75rem/1.35 "Poppins", sans-serif;
-  position: absolute;
+.seguros-item li::before {
+  content: "";
   display: inline-block;
-  margin-top: 10px;
-  top: 65px;
-  right: 33px;
+  width: 13px;
+  height: 9px;
+  background-image: url("../../img/icones/lista.svg");
+  position: absolute;
+  left: -21px;
 }
 
-.botao-secundario{
-    display: inline-block;
-    padding: 16px 32px;
-    background-color: var(--cor-10);
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    color: var(--cor-0);
-    font: 600 1.125rem/1.35 "Roboto", sans-serif;
+.seguros-item a {
+  grid-column: 1/-1;
 }
 
-.botao-secundario:hover{
-    background-color: var(--cor-9);
-}
-
-@media (max-width: 800px){
-  body .seguros{
+@media (max-width: 800px) {
+  .seguros {
     grid-template-columns: 1fr;
   }
 }
-
-
-
